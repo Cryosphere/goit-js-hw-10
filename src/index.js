@@ -41,11 +41,11 @@ function renderCountryList(countries) {
       <img src="${country.flags.svg}" alt="Flag of ${
         country.name.official
       }" width="30" hight="20">
-         <b>${country.name.official}</p>
+         <b>${country.name.official}</b>
                 </li>`;
     })
     .join('');
-  countryList.innerHTML = markup;
+    countryList.innerHTML = markup;
 }
 
 function renderOneCountry(countries) {
@@ -55,14 +55,15 @@ function renderOneCountry(countries) {
       <img src="${country.flags.svg}" alt="Flag of ${
             country.name.official
           }" width="30" hight="20">
-         <b>${country.name.official}</b></p>
+         <b>${country.name.official}</b>
             <p><b>Capital</b>: ${country.capital}</p>
             <p><b>Population</b>: ${country.population}</p>
             <p><b>Languages</b>: ${Object.values(country.languages)} </p>
-                </li>`;
+            </li>`;
         })
         .join('');
-      countryList.innerHTML = markup;
+    countryList.innerHTML = markup;
+    
 }
 
 function cleanHtml() {
